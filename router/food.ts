@@ -5,7 +5,7 @@ export const foodRouter = Router();
  
 foodRouter.get("/", async (req, res) => {
     res.send({
-        message: 'FOOOODDD'
+        message: 'Food'
     });
 });
  
