@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { config, configDotenv } from "dotenv";
 import { foodCategoryRouter } from "./router/food-category";
-import { foodRouter } from "./router/food";
+import { FoodRouter } from "./router/food";
 const cors = require('cors');
  
 const PORT = 5000;
@@ -20,7 +20,7 @@ const connectMongoDB = async () => {
 connectMongoDB();
  
 app.use("/food-category/", foodCategoryRouter);
-app.use('/food/', foodRouter);
+app.use('/food/', FoodRouter);
 app.use('/order/', foodCategoryRouter);
  
 app.listen(PORT, () => {
