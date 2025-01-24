@@ -23,7 +23,7 @@ connectMongoDB();
 app.use("/food-category/", foodCategoryRouter);
 app.use('/food/', FoodRouter);
 // app.use('/order/', UserOrdersRouter);
-app.use('/users', UserOrdersRouter);
+app.use('/users/', UserOrdersRouter);
  
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
