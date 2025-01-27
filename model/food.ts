@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
  
 const FOOD_SCHEMA = new Schema(
   {
-    foodName: String,
+    name: String,
     price: Number,
     image: String,
     ingredients: String,

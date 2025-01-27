@@ -9,15 +9,15 @@ const auth = async (Request, Response, next) => {
 
         const UserID = verified.sub;
 
-        req.UserID = UserID;
+        Request.UserID = UserID;
         next();
     } catch {
-        res.json({status: "Forbidden"});
+        Response.json({status: "Forbidden"});
     };
 };
 
 
-app.get("/categories", auth, async (req, res) => {
+app.get("/categories", auth, async (Request, Response) => {
     console.log(req.UserID);
     const data = fs.readFileSync("data/movies.txt", "UTF-8");
     const movies = JSON.parse(data);
